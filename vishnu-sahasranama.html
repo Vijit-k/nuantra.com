@@ -11,39 +11,56 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--cr:#EAE3D3;--cb:#6B1A1A;--cg:#C4922A;--ct:#2A180E;--cm:#8B6F52;--ce:#CAB99D;--cl:#D8CCBA}
-body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
 .scr{display:none;max-width:420px;margin:0 auto;min-height:100vh}
 .scr.on{display:block}
 
-/* ── STORY ─────────────────────────────────── */
+/* ── STORY ─────────────────────────── */
 .story{padding:0 0 56px}
 .s-top{padding:52px 28px 32px;text-align:center;border-bottom:1px solid var(--ce)}
-.s-tag{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.22em;color:var(--cg);text-transform:uppercase;font-weight:600;margin-bottom:20px}
-.s-deva{font-family:'Noto Serif Devanagari',serif;font-size:26px;color:var(--cb);line-height:1.6;margin-bottom:16px}
-.s-trans{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--cm);font-style:italic;line-height:1.8}
+.s-tag{font-family:"Cormorant Garamond",serif;font-size:11px;letter-spacing:.22em;color:var(--cg);text-transform:uppercase;font-weight:600;margin-bottom:20px}
+.s-deva{font-family:"Noto Serif Devanagari",serif;font-size:26px;color:var(--cb);line-height:1.6;margin-bottom:16px}
+.s-trans{font-family:"Cormorant Garamond",serif;font-size:14px;color:var(--cm);font-style:italic;line-height:1.8}
 .s-body{padding:32px 28px}
-.s-scene{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.12em;color:var(--cg);text-transform:uppercase;font-weight:600;margin-bottom:20px}
+.s-scene{font-family:"Cormorant Garamond",serif;font-size:13px;letter-spacing:.12em;color:var(--cg);text-transform:uppercase;font-weight:600;margin-bottom:20px}
 .s-p{font-size:14px;line-height:1.9;color:var(--ct);margin-bottom:18px}
-.s-q{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--cb);font-style:italic;line-height:1.7;padding:20px 0;border-top:1px solid var(--ce);border-bottom:1px solid var(--ce);margin:24px 0;text-align:center}
+.s-q{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--cb);font-style:italic;line-height:1.7;padding:20px 0;border-top:1px solid var(--ce);border-bottom:1px solid var(--ce);margin:24px 0;text-align:center}
 .s-p b{font-weight:600}
 .s-cta{padding:0 28px 40px}
-.s-btn{width:100%;padding:18px;background:var(--cb);color:var(--cr);border:none;font-size:14px;font-family:'Inter',sans-serif;cursor:pointer;letter-spacing:.06em;font-weight:500;border-radius:2px;margin-bottom:12px}
-.s-skip{width:100%;padding:12px;background:transparent;border:1px solid var(--ce);color:var(--cm);font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;border-radius:2px}
+.s-btn{width:100%;padding:18px;background:var(--cb);color:var(--cr);border:none;font-size:14px;font-family:"Inter",sans-serif;cursor:pointer;letter-spacing:.06em;font-weight:500;border-radius:2px;margin-bottom:12px}
+.s-skip{width:100%;padding:12px;background:transparent;border:1px solid var(--ce);color:var(--cm);font-size:13px;font-family:"Inter",sans-serif;cursor:pointer;border-radius:2px}
 
-/* ── DAY 0 ──────────────────────────────────── */
+/* ── DAY 0 ─────────────────────────── */
 .d0{padding:0 0 56px}
 .d0-hdr{padding:20px 24px 0;display:flex;justify-content:space-between;align-items:center}
-.d0-logo{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.22em;color:var(--cb);font-weight:600;text-transform:uppercase;text-decoration:none}
-.d0-day{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--cg);letter-spacing:.12em;font-weight:600}
-.d0-hero{padding:36px 28px 20px;text-align:center;border-bottom:1px solid var(--ce)}
-.d0-label{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.2em;color:var(--cg);text-transform:uppercase;font-weight:600;margin-bottom:16px}
-.d0-deva{font-family:'Noto Serif Devanagari',serif;font-size:26px;color:var(--cb);line-height:1.65;margin-bottom:12px}
-.d0-mean{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--cm);font-style:italic;line-height:1.7}
+.d0-logo-wrap{display:flex;align-items:center;gap:10px}
+.d0-logo-img{width:32px;height:32px;border-radius:50%;object-fit:cover}
+.d0-logo{font-family:"Cormorant Garamond",serif;font-size:12px;letter-spacing:.22em;color:var(--cb);font-weight:600;text-transform:uppercase;text-decoration:none}
+.d0-day{font-family:"Cormorant Garamond",serif;font-size:12px;color:var(--cg);letter-spacing:.12em;font-weight:600}
+
+/* Vishnu image */
+.vishnu-img-wrap{position:relative;overflow:hidden;max-height:340px}
+.vishnu-img{width:100%;height:340px;object-fit:cover;object-position:center top;display:block}
+.vishnu-caption{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(transparent,rgba(42,24,14,.75));
+  padding:32px 20px 16px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:13px;font-style:italic;
+  color:rgba(234,227,211,.9);
+  text-align:center;
+  letter-spacing:.04em;
+}
+
+.d0-hero{padding:28px 28px 20px;text-align:center;border-bottom:1px solid var(--ce)}
+.d0-label{font-family:"Cormorant Garamond",serif;font-size:11px;letter-spacing:.2em;color:var(--cg);text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.d0-deva{font-family:"Noto Serif Devanagari",serif;font-size:22px;color:var(--cb);line-height:1.65;margin-bottom:12px}
+.d0-mean{font-family:"Cormorant Garamond",serif;font-size:16px;color:var(--cm);font-style:italic;line-height:1.7}
 .d0-sect{padding:24px 28px}
 .d0-stit{font-size:10px;letter-spacing:.22em;color:var(--cm);font-weight:600;text-transform:uppercase;margin-bottom:14px}
 .d0-p{font-size:13px;line-height:1.85;color:var(--ct);margin-bottom:14px}
 .d0-step{display:flex;gap:14px;margin-bottom:12px;align-items:flex-start}
-.d0-num{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--cg);font-weight:600;min-width:20px}
+.d0-num{font-family:"Cormorant Garamond",serif;font-size:14px;color:var(--cg);font-weight:600;min-width:20px}
 .d0-txt{font-size:13px;color:var(--ct);line-height:1.7}
 .d0-div{margin:4px 28px;height:1px;background:var(--ce)}
 .d0-audio{margin:20px 28px}
@@ -52,99 +69,79 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
 .d0-al{font-size:14px;font-weight:500;margin-bottom:3px}
 .d0-as{font-size:11px;opacity:.6}
 .d0-cta{padding:20px 28px}
-.d0-btn{width:100%;padding:18px;background:var(--cb);color:var(--cr);border:none;font-size:14px;font-family:'Inter',sans-serif;cursor:pointer;letter-spacing:.06em;font-weight:500;border-radius:2px}
+.d0-btn{width:100%;padding:18px;background:var(--cb);color:var(--cr);border:none;font-size:14px;font-family:"Inter",sans-serif;cursor:pointer;letter-spacing:.06em;font-weight:500;border-radius:2px}
 
-/* ── NAME SCREEN ────────────────────────────── */
+/* ── NAME SCREEN ────────────────────── */
 .page{padding-bottom:56px}
-
-/* Header */
 .hdr{padding:20px 24px 0;display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.22em;color:var(--cb);font-weight:600;text-transform:uppercase;text-decoration:none}
+.hdr-left{display:flex;align-items:center;gap:10px}
+.hdr-logo-img{width:28px;height:28px;border-radius:50%;object-fit:cover}
+.logo{font-family:"Cormorant Garamond",serif;font-size:12px;letter-spacing:.22em;color:var(--cb);font-weight:600;text-transform:uppercase;text-decoration:none}
 .hdr-r{display:flex;align-items:center;gap:8px}
 .sbadge{background:var(--cb);color:var(--cr);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:500;display:none}
 .sbadge.on{display:block}
-.info-btn{background:transparent;border:1px solid var(--ce);color:var(--cm);font-size:11px;cursor:pointer;padding:4px 10px;border-radius:12px;font-family:'Inter',sans-serif}
-
-/* Progress */
+.info-btn{background:transparent;border:1px solid var(--ce);color:var(--cm);font-size:11px;cursor:pointer;padding:4px 10px;border-radius:12px;font-family:"Inter",sans-serif}
 .prg{padding:16px 24px 0}
 .prl{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
-.dlab{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--cg);letter-spacing:.1em;font-weight:600}
+.dlab{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--cg);letter-spacing:.1em;font-weight:600}
 .pcl{font-size:11px;color:var(--cm)}
 .pb{height:2px;background:var(--cl);border-radius:2px}
 .pf{height:2px;background:var(--cg);border-radius:2px;min-width:3px;transition:width .5s ease}
 .ml{display:flex;justify-content:space-between;font-size:11px;color:var(--cm);margin-top:6px}
 
-/* ── NAV ROW — used at BOTH top and bottom ── */
-/* Placed between progress and hero (top), and after audio (bottom) */
+/* Nav buttons — identical top and bottom */
 .nav{padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
 .nav-top{padding:14px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--ce)}
-.nb{
-  background:transparent;
-  border:1px solid var(--ce);
-  color:var(--cb);
-  padding:11px 22px;
-  font-size:13px;
-  cursor:pointer;
-  font-family:'Inter',sans-serif;
-  border-radius:2px;
-  font-weight:500;
-  min-width:90px;
-  text-align:center;
-  transition:border-color .15s,background .15s;
-}
+.nb{background:transparent;border:1px solid var(--ce);color:var(--cb);padding:11px 22px;font-size:13px;cursor:pointer;font-family:"Inter",sans-serif;border-radius:2px;font-weight:500;min-width:90px;text-align:center}
 .nb:hover:not(:disabled){border-color:var(--cb);background:rgba(107,26,26,.04)}
 .nb:disabled{border-color:var(--cl);color:var(--cl);cursor:default}
-.nc{font-size:12px;color:var(--cm);font-family:'Cormorant Garamond',serif;font-style:italic}
+.nc{font-size:12px;color:var(--cm);font-family:"Cormorant Garamond",serif;font-style:italic}
 
 /* Hero */
 .hero{padding:32px 28px 16px;text-align:center}
-.skt{font-family:'Noto Serif Devanagari',serif;font-size:54px;font-weight:700;color:var(--cb);line-height:1.25;margin-bottom:14px}
-.tlit{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--cg);letter-spacing:.32em;font-weight:600;margin-bottom:18px}
-.mean{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ct);font-style:italic;line-height:1.65;max-width:320px;margin:0 auto}
+.skt{font-family:"Noto Serif Devanagari",serif;font-size:54px;font-weight:700;color:var(--cb);line-height:1.25;margin-bottom:14px}
+.tlit{font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--cg);letter-spacing:.32em;font-weight:600;margin-bottom:18px}
+.mean{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--ct);font-style:italic;line-height:1.65;max-width:320px;margin:0 auto}
 
-/* Divider + sections */
+/* Sections */
 .div{margin:4px 28px;height:1px;background:var(--ce)}
 .slab{font-size:10px;letter-spacing:.22em;color:var(--cm);font-weight:600;text-transform:uppercase;margin-bottom:12px}
 .cmp{padding:24px 28px}
-.rfl{font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.8;color:var(--ct);font-style:italic}
+.rfl{font-family:"Cormorant Garamond",serif;font-size:19px;line-height:1.8;color:var(--ct);font-style:italic}
 .cmw{padding:20px 28px}
-.cmtog{display:flex;align-items:center;gap:8px;background:transparent;border:none;color:var(--cm);font-size:12px;cursor:pointer;padding:0;font-family:'Inter',sans-serif;letter-spacing:.04em;font-weight:500}
+.cmtog{display:flex;align-items:center;gap:8px;background:transparent;border:none;color:var(--cm);font-size:12px;cursor:pointer;padding:0;font-family:"Inter",sans-serif;letter-spacing:.04em;font-weight:500}
 .cbd{margin-top:14px;padding:16px;background:rgba(107,26,26,.04);border-left:3px solid var(--cg);display:none}
 .cbd.on{display:block}
-.cbt{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--ct);line-height:1.8;font-style:italic}
+.cbt{font-family:"Cormorant Garamond",serif;font-size:17px;color:var(--ct);line-height:1.8;font-style:italic}
 .cbn{margin-top:10px;font-size:10px;color:var(--cm);letter-spacing:.04em}
 .prc{padding:20px 28px}
 .ps{display:flex;gap:14px;margin-bottom:12px;align-items:flex-start}
-.pt{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--cg);font-weight:600;min-width:42px;padding-top:2px}
+.pt{font-family:"Cormorant Garamond",serif;font-size:12px;color:var(--cg);font-weight:600;min-width:42px;padding-top:2px}
 .pd{font-size:13px;color:var(--ct);line-height:1.6}
 .aw{padding:20px 28px}
 .ab{display:flex;align-items:center;gap:16px;background:var(--cb);color:var(--cr);padding:18px 20px;text-decoration:none;border-radius:2px}
 .ac{width:38px;height:38px;border-radius:50%;border:1px solid rgba(234,227,211,.35);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 .al{font-size:14px;font-weight:500;margin-bottom:3px}
 .as{font-size:11px;opacity:.6}
-
-/* Subscription */
 .sub{padding:32px 28px}
-.stit{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cb);font-weight:600;margin-bottom:8px}
+.stit{font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--cb);font-weight:600;margin-bottom:8px}
 .sdsc{font-size:13px;color:var(--cm);line-height:1.75;margin-bottom:24px}
-.si{width:100%;padding:13px 16px;background:transparent;border:1px solid var(--ce);color:var(--ct);font-size:14px;outline:none;margin-bottom:10px;font-family:'Inter',sans-serif;border-radius:2px}
+.si{width:100%;padding:13px 16px;background:transparent;border:1px solid var(--ce);color:var(--ct);font-size:14px;outline:none;margin-bottom:10px;font-family:"Inter",sans-serif;border-radius:2px}
 .si:focus{border-color:var(--cg)}
 .si.err{border-color:var(--cb)}
 .ser{font-size:12px;color:var(--cb);margin-bottom:10px;display:none}
 .ser.on{display:block}
-.sbtn{width:100%;padding:16px;background:var(--cb);color:var(--cr);border:none;font-size:14px;font-family:'Inter',sans-serif;cursor:pointer;letter-spacing:.05em;font-weight:500;border-radius:2px}
-.ssc{padding:20px;background:rgba(107,26,26,.05);border-left:3px solid var(--cg);font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--ct);font-style:italic;line-height:1.7;display:none}
+.sbtn{width:100%;padding:16px;background:var(--cb);color:var(--cr);border:none;font-size:14px;font-family:"Inter",sans-serif;cursor:pointer;letter-spacing:.05em;font-weight:500;border-radius:2px}
+.ssc{padding:20px;background:rgba(107,26,26,.05);border-left:3px solid var(--cg);font-family:"Cormorant Garamond",serif;font-size:17px;color:var(--ct);font-style:italic;line-height:1.7;display:none}
 .ssc.on{display:block}
 .sfo.hid{display:none}
-
-/* Footer */
 .ftr{margin:0 28px;padding-top:20px;border-top:1px solid var(--ce);font-size:10px;color:var(--cm);line-height:1.9}
 .flab{font-weight:600;margin-bottom:4px}
 </style>
 </head>
 <body>
 
-<!-- ═══════════ STORY SCREEN ═══════════ -->
+<!-- ═══════════ STORY ═══════════ -->
 <div id="scr-story" class="scr story">
   <div class="s-top">
     <div class="s-tag">Nuantra · Before the Journey Begins</div>
@@ -161,7 +158,7 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
     <p class="s-p">He said: <i>I will tell you the thousand names of the Lord who is the universe and beyond it. Reciting them, a person crosses all suffering.</i></p>
     <p class="s-p">That teaching is the Vishnu Sahasranama. Every name you encounter on this journey was first spoken by a dying man, on a bed of arrows, to a grieving king who had just won a war at enormous cost.</p>
     <p class="s-p"><b>That is what you are entering.</b></p>
-    <p class="s-p" style="font-style:italic;color:var(--cm);font-size:13px">Source: Mahabharata, Anushasana Parva, Chapter 149. Text: SanskritDocuments.org (proofread edition, October 2024). This is the complete Mahabharata tradition followed in most South Indian homes.</p>
+    <p class="s-p" style="font-style:italic;color:var(--cm);font-size:13px">Source: Mahabharata, Anushasana Parva, Chapter 149. Text: SanskritDocuments.org (proofread edition, October 2024).</p>
   </div>
   <div class="s-cta">
     <button class="s-btn" onclick="goDay0()">Begin the Preparation →</button>
@@ -169,37 +166,59 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
   </div>
 </div>
 
-<!-- ═══════════ DAY 0 SCREEN ═══════════ -->
+<!-- ═══════════ DAY 0 ═══════════ -->
 <div id="scr-day0" class="scr d0">
   <div class="d0-hdr">
-    <a href="https://nuantra.com" class="d0-logo">Nuantra</a>
+    <div class="d0-logo-wrap">
+      <img src="/Nuantra_logo.png" alt="Nuantra" class="d0-logo-img"/>
+      <a href="/" class="d0-logo">Nuantra</a>
+    </div>
     <div class="d0-day">DAY 0 · Preparation</div>
   </div>
-  <div class="d0-hero">
-    <div class="d0-label">The Invocation</div>
-    <div class="d0-deva">शुक्लाम्बरधरं विष्णुं<br/>शशिवर्णं चतुर्भुजम् ।<br/>प्रसन्नवदनं ध्यायेत्<br/>सर्वविघ्नोपशान्तये ॥</div>
-    <div class="d0-mean">Meditate on Vishnu clothed in white, of the hue of the moon, of four arms and a serene face — for the removal of all obstacles.</div>
+
+  <!-- Vishnu image — Anantashayi form, matching the Dhyana shloka -->
+  <div class="vishnu-img-wrap">
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Vishnu_and_Lakshmi_on_Shesha_Naga,_ca_1870.jpg"
+      alt="Vishnu and Lakshmi reclining on Ananta Shesha — the cosmic ocean form described in the Dhyana shloka"
+      class="vishnu-img"
+      loading="eager"
+      onerror="this.parentElement.style.display='none'"
+    />
+    <div class="vishnu-caption">
+      शान्ताकारं भुजगशयनं पद्मनाभं सुरेशम्<br/>
+      Vishnu reclining on Ananta Shesha · Traditional painting, c. 1870 · Public domain
+    </div>
   </div>
+
+  <div class="d0-hero">
+    <div class="d0-label">The Dhyana Shloka</div>
+    <div class="d0-deva">शान्ताकारं भुजगशयनं<br/>पद्मनाभं सुरेशं<br/>विश्वाधारं गगनसदृशं<br/>मेघवर्णं शुभाङ्गम् ।<br/>लक्ष्मीकान्तं कमलनयनं<br/>योगिभिर्ध्यानगम्यं<br/>वन्दे विष्णुं भवभयहरं<br/>सर्वलोकैकनाथम् ॥</div>
+    <div class="d0-mean">He whose form is peace, who reclines on the great serpent, from whose navel springs the lotus, Lord of the Devas, support of the universe, vast as the sky, of auspicious form — the beloved of Lakshmi, of lotus eyes, attainable by Yogis in meditation — I worship that Vishnu who removes the fear of worldly existence and is the one Lord of all worlds.</div>
+  </div>
+
   <div class="d0-div"></div>
   <div class="d0-sect">
-    <div class="d0-stit">The Dhyana Shloka</div>
-    <div class="d0-deva" style="font-size:20px;padding:8px 0 12px">शान्ताकारं भुजगशयनं<br/>पद्मनाभं सुरेशं<br/>विश्वाधारं गगनसदृशं<br/>मेघवर्णं शुभाङ्गम् ।</div>
-    <p class="d0-p" style="font-style:italic;font-family:'Cormorant Garamond',serif;font-size:16px">He whose form is peace, who reclines on the great serpent, from whose navel springs the lotus, who is the Lord of all Devas — on that Vishnu, the support of the universe, vast as the sky, dark as the rain-cloud, of auspicious limbs — meditate.</p>
+    <div class="d0-stit">The Invocation</div>
+    <div class="d0-deva" style="font-size:20px;text-align:center;padding:8px 0 12px">शुक्लाम्बरधरं विष्णुं<br/>शशिवर्णं चतुर्भुजम् ।<br/>प्रसन्नवदनं ध्यायेत्<br/>सर्वविघ्नोपशान्तये ॥</div>
+    <p class="d0-p" style="font-style:italic;font-family:'Cormorant Garamond',serif;font-size:16px;text-align:center">Meditate on Vishnu clothed in white, of the hue of the moon, of four arms and a serene face — for the removal of all obstacles.</p>
   </div>
+
   <div class="d0-div"></div>
   <div class="d0-sect">
     <div class="d0-stit">How this journey works</div>
-    <div class="d0-step"><div class="d0-num">1</div><div class="d0-txt">Each day you will receive one name of the Lord. 1000 names over 1000 days — the complete Sahasranama.</div></div>
+    <div class="d0-step"><div class="d0-num">1</div><div class="d0-txt">Each day you receive one name of the Lord. 1000 names over 1000 days — the complete Sahasranama.</div></div>
     <div class="d0-step"><div class="d0-num">2</div><div class="d0-txt">Spend 25 minutes each morning. Read the name. Sit with the reflection. Chant along with M.S. Subbulakshmi.</div></div>
-    <div class="d0-step"><div class="d0-num">3</div><div class="d0-txt">The names come from the Mahabharata, Anushasana Parva (SanskritDocuments.org, proofread 2024). The meanings come from Adi Shankaracharya's Bhashya — the oldest and most respected commentary.</div></div>
-    <div class="d0-step"><div class="d0-num">4</div><div class="d0-txt">Your streak counts your consecutive days. Your pilgrimage milestone marks your progress across India's sacred geography.</div></div>
+    <div class="d0-step"><div class="d0-num">3</div><div class="d0-txt">The names come from the Mahabharata, Anushasana Parva (SanskritDocuments.org, proofread 2024). Meanings from Adi Shankaracharya's Bhashya.</div></div>
+    <div class="d0-step"><div class="d0-num">4</div><div class="d0-txt">Your streak counts consecutive days. Your pilgrimage milestone marks your progress across India's sacred geography.</div></div>
   </div>
+
   <div class="d0-div"></div>
   <div class="d0-sect">
     <div class="d0-stit">How to chant</div>
     <p class="d0-p">You do not need to know Sanskrit. Play M.S. Subbulakshmi's recording and follow along. Let the sound enter first. Meaning follows.</p>
-    <p class="d0-p">If you wish to learn the pronunciation, listen to the first few names slowly and repeat. One name at a time, across 1000 days, is enough.</p>
   </div>
+
   <div class="d0-div"></div>
   <div class="d0-audio">
     <a class="d0-ab" href="https://www.youtube.com/watch?v=ATflA6WOy0I" target="_blank" rel="noopener noreferrer">
@@ -214,17 +233,17 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
 
 <!-- ═══════════ NAME SCREEN ═══════════ -->
 <div id="scr-name" class="scr page">
-
-  <!-- Header -->
   <div class="hdr">
-    <a href="https://nuantra.com" class="logo">Nuantra</a>
+    <div class="hdr-left">
+      <img src="/Nuantra_logo.png" alt="Nuantra" class="hdr-logo-img"/>
+      <a href="/" class="logo">Nuantra</a>
+    </div>
     <div class="hdr-r">
       <button class="info-btn" onclick="showStory()">The Story</button>
       <div class="sbadge" id="sb"></div>
     </div>
   </div>
 
-  <!-- Progress bar -->
   <div class="prg">
     <div class="prl">
       <div class="dlab" id="dl">YOUR DAY 1 OF 1,000</div>
@@ -234,14 +253,13 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
     <div class="ml"><span id="cm">🪔 Setting Out</span><span id="nm"></span></div>
   </div>
 
-  <!-- TOP NAVIGATION — same weight as bottom -->
+  <!-- TOP NAV — full size, same as bottom -->
   <div class="nav-top">
     <button class="nb" id="tnb-p" onclick="nav(-1)" disabled>← Prev</button>
     <div class="nc" id="ncl-t">Name 1 of 1,000</div>
     <button class="nb" id="tnb-n" onclick="nav(1)">Next →</button>
   </div>
 
-  <!-- Sanskrit name hero -->
   <div class="hero">
     <div class="skt" id="skt">विश्वम्</div>
     <div class="tlit" id="tl">VISHVAM</div>
@@ -249,29 +267,16 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
   </div>
 
   <div class="div"></div>
-
-  <!-- Contemplation -->
-  <div class="cmp">
-    <div class="slab">Today's Contemplation</div>
-    <div class="rfl" id="rf"></div>
-  </div>
-
+  <div class="cmp"><div class="slab">Today's Contemplation</div><div class="rfl" id="rf"></div></div>
   <div class="div"></div>
-
-  <!-- Commentary -->
   <div class="cmw">
-    <button class="cmtog" onclick="tgc()">
-      <span id="ci">▶</span>&nbsp; Adi Shankaracharya's Commentary
-    </button>
+    <button class="cmtog" onclick="tgc()"><span id="ci">▶</span>&nbsp; Adi Shankaracharya's Commentary</button>
     <div class="cbd" id="cbd">
       <div class="cbt" id="cbt"></div>
       <div class="cbn">Paraphrased from Vishnu Sahasranama Bhashya · Advaita tradition</div>
     </div>
   </div>
-
   <div class="div"></div>
-
-  <!-- Practice guide -->
   <div class="prc">
     <div class="slab">Your 25-Minute Practice</div>
     <div class="ps"><div class="pt">2 min</div><div class="pd">Read today's name — meaning and reflection</div></div>
@@ -279,32 +284,26 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
     <div class="ps"><div class="pt">22 min</div><div class="pd">Chant along with M.S. Subbulakshmi below</div></div>
     <div class="ps"><div class="pt">3 min</div><div class="pd">Sit in silence. Let the name settle.</div></div>
   </div>
-
   <div class="div"></div>
-
-  <!-- Audio -->
   <div class="aw">
     <a class="ab" href="https://www.youtube.com/watch?v=ATflA6WOy0I" target="_blank" rel="noopener noreferrer">
       <div class="ac">▶</div>
       <div><div class="al">M.S. Subbulakshmi — Full Sahasranama</div><div class="as">Official Saregama recording · Opens YouTube</div></div>
     </a>
   </div>
-
   <div class="div"></div>
 
-  <!-- BOTTOM NAVIGATION — identical to top -->
+  <!-- BOTTOM NAV — identical to top -->
   <div class="nav">
     <button class="nb" id="bnb-p" onclick="nav(-1)" disabled>← Prev</button>
     <div class="nc" id="ncl-b">Name 1 of 1,000</div>
     <button class="nb" id="bnb-n" onclick="nav(1)">Next →</button>
   </div>
-
   <div class="div"></div>
 
-  <!-- Subscription -->
   <div class="sub">
     <div class="stit">Join the 1,000-Day Journey</div>
-    <div class="sdsc">Every week, seven names arrive in your inbox with Sanskrit, meaning, and Shankaracharya's commentary. Your journey starts the day you subscribe. Free. No ads. No monetization. A personal offering.</div>
+    <div class="sdsc">Every week, seven names arrive in your inbox with Sanskrit, meaning, and Shankaracharya's commentary. Your journey starts the day you subscribe. Free. No ads. No monetization.</div>
     <div class="ssc" id="ss"></div>
     <div class="sfo" id="sf">
       <input class="si" type="text" id="sn" placeholder="Your name"/>
@@ -314,7 +313,6 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
     </div>
   </div>
 
-  <!-- Footer -->
   <div class="ftr">
     <div class="flab">Source</div>
     Primary: Mahabharata, Anushasana Parva (ch. 149)<br/>
@@ -323,7 +321,6 @@ body{background:var(--cr);color:var(--ct);font-family:'Inter',-apple-system,sans
     English reference: Swami Tapasyananda (Ramakrishna Mission)<br/>
     Audio: M.S. Subbulakshmi (Saregama, official upload)
   </div>
-
 </div>
 
 <script>
@@ -338,40 +335,14 @@ const M=[
 ];
 const BF="PASTE_BREVO_FORM_URL_HERE";
 let idx=0,co=false;
-
 function ts(){return new Date().toISOString().split("T")[0]}
-function cd(s){
-  const st=new Date(s);st.setHours(0,0,0,0);
-  const t=new Date();t.setHours(0,0,0,0);
-  return Math.max(1,Math.min(Math.floor((t-st)/86400000)+1,1000));
-}
-function show(id){
-  ["scr-story","scr-day0","scr-name"].forEach(s=>document.getElementById(s).classList.remove("on"));
-  document.getElementById(id).classList.add("on");
-  window.scrollTo(0,0);
-}
+function cd(s){const st=new Date(s);st.setHours(0,0,0,0);const t=new Date();t.setHours(0,0,0,0);return Math.max(1,Math.min(Math.floor((t-st)/86400000)+1,1000))}
+function show(id){["scr-story","scr-day0","scr-name"].forEach(s=>document.getElementById(s).classList.remove("on"));document.getElementById(id).classList.add("on");window.scrollTo(0,0)}
 function goDay0(){localStorage.setItem("vs_story","1");show("scr-day0")}
-function skipToNames(){
-  localStorage.setItem("vs_story","1");
-  if(!localStorage.getItem("vs_s")){
-    localStorage.setItem("vs_s",ts());
-    localStorage.setItem("vs_day0","1");
-  }
-  initNames();show("scr-name");
-}
-function startNames(){
-  localStorage.setItem("vs_day0","1");
-  if(!localStorage.getItem("vs_s"))localStorage.setItem("vs_s",ts());
-  initNames();show("scr-name");
-}
+function skipToNames(){localStorage.setItem("vs_story","1");if(!localStorage.getItem("vs_s")){localStorage.setItem("vs_s",ts());localStorage.setItem("vs_day0","1")}initNames();show("scr-name")}
+function startNames(){localStorage.setItem("vs_day0","1");if(!localStorage.getItem("vs_s"))localStorage.setItem("vs_s",ts());initNames();show("scr-name")}
 function showStory(){show("scr-story")}
-
-function initNames(){
-  const s=localStorage.getItem("vs_s")||ts();
-  const d=cd(s);
-  idx=d-1;
-  upd(d);streak();rn();
-}
+function initNames(){const s=localStorage.getItem("vs_s")||ts();const d=cd(s);idx=d-1;upd(d);streak();rn()}
 function upd(d){
   const p=Math.min((d/1000)*100,100);
   document.getElementById("dl").textContent="YOUR DAY "+d+" OF 1,000";
@@ -387,18 +358,8 @@ function streak(){
   const lv=localStorage.getItem("vs_lv");
   const sv=parseInt(localStorage.getItem("vs_st")||"0");
   let s;
-  if(lv===t){s=sv}
-  else{
-    const y=new Date();y.setDate(y.getDate()-1);
-    s=lv===y.toDateString()?sv+1:1;
-    localStorage.setItem("vs_st",String(s));
-    localStorage.setItem("vs_lv",t);
-  }
-  if(s>0){
-    const b=document.getElementById("sb");
-    b.textContent="\uD83D\uDD25 "+s+" day"+(s!==1?"s":"");
-    b.classList.add("on");
-  }
+  if(lv===t){s=sv}else{const y=new Date();y.setDate(y.getDate()-1);s=lv===y.toDateString()?sv+1:1;localStorage.setItem("vs_st",String(s));localStorage.setItem("vs_lv",t)}
+  if(s>0){const b=document.getElementById("sb");b.textContent="\uD83D\uDD25 "+s+" day"+(s!==1?"s":"");b.classList.add("on")}
 }
 function rn(){
   const n=N[idx];
@@ -407,56 +368,32 @@ function rn(){
   document.getElementById("mn").textContent=n.m;
   document.getElementById("rf").textContent="\u201C"+n.r+"\u201D";
   document.getElementById("cbt").textContent=n.m+" \u2014 Paraphrased from Adi Shankaracharya\u2019s Vishnu Sahasranama Bhashya. Source: Mahabharata, Anushasana Parva, Ch. 149 (SanskritDocuments.org, proofread edition 2024).";
-  // Update BOTH name counters
   const label="Name "+n.n+" of 1,000";
   document.getElementById("ncl-t").textContent=label;
   document.getElementById("ncl-b").textContent=label;
-  // Reset commentary
-  co=false;
-  document.getElementById("cbd").classList.remove("on");
-  document.getElementById("ci").textContent="\u25BA";
-  // Nav states — both sets
-  const atStart=idx===0;
-  const atEnd=idx>=N.length-1;
-  document.getElementById("tnb-p").disabled=atStart;
-  document.getElementById("tnb-n").disabled=atEnd;
-  document.getElementById("bnb-p").disabled=atStart;
-  document.getElementById("bnb-n").disabled=atEnd;
+  co=false;document.getElementById("cbd").classList.remove("on");document.getElementById("ci").textContent="\u25BA";
+  const atStart=idx===0,atEnd=idx>=N.length-1;
+  document.getElementById("tnb-p").disabled=atStart;document.getElementById("tnb-n").disabled=atEnd;
+  document.getElementById("bnb-p").disabled=atStart;document.getElementById("bnb-n").disabled=atEnd;
 }
-function nav(d){
-  const ni=idx+d;
-  if(ni<0||ni>=N.length)return;
-  idx=ni;rn();
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-function tgc(){
-  co=!co;
-  document.getElementById("cbd").classList.toggle("on",co);
-  document.getElementById("ci").textContent=co?"\u25BC":"\u25BA";
-}
+function nav(d){const ni=idx+d;if(ni<0||ni>=N.length)return;idx=ni;rn();window.scrollTo({top:0,behavior:"smooth"})}
+function tgc(){co=!co;document.getElementById("cbd").classList.toggle("on",co);document.getElementById("ci").textContent=co?"\u25BC":"\u25BA"}
 function sub(){
   const nm=document.getElementById("sn").value.trim();
   const em=document.getElementById("se2").value.trim();
-  if(!em.includes("@")||!em.includes(".")){
-    document.getElementById("se2").classList.add("err");
-    document.getElementById("ser").classList.add("on");return;
-  }
-  document.getElementById("se2").classList.remove("err");
-  document.getElementById("ser").classList.remove("on");
-  if(BF&&BF!=="PASTE_BREVO_FORM_URL_HERE")
-    window.open(BF+"?EMAIL="+encodeURIComponent(em)+"&FIRSTNAME="+encodeURIComponent(nm),"_blank");
+  if(!em.includes("@")||!em.includes(".")){document.getElementById("se2").classList.add("err");document.getElementById("ser").classList.add("on");return}
+  document.getElementById("se2").classList.remove("err");document.getElementById("ser").classList.remove("on");
+  if(BF&&BF!=="PASTE_BREVO_FORM_URL_HERE")window.open(BF+"?EMAIL="+encodeURIComponent(em)+"&FIRSTNAME="+encodeURIComponent(nm),"_blank");
   document.getElementById("sf").classList.add("hid");
-  const s=document.getElementById("ss");
-  s.textContent="Welcome"+(nm?", "+nm:"")+".\u00A0Your journey starts today. Your first email arrives in 7 days.";
-  s.classList.add("on");
+  const s=document.getElementById("ss");s.textContent="Welcome"+(nm?", "+nm:"")+".\u00A0Your journey starts today. First email in 7 days.";s.classList.add("on");
   if(!localStorage.getItem("vs_s"))localStorage.setItem("vs_s",ts());
 }
 (function(){
   const seenStory=localStorage.getItem("vs_story");
   const started=localStorage.getItem("vs_s");
-  if(!seenStory){show("scr-story");}
-  else if(!started){show("scr-day0");}
-  else{initNames();show("scr-name");}
+  if(!seenStory){show("scr-story")}
+  else if(!started){show("scr-day0")}
+  else{initNames();show("scr-name")}
 })();
 </script>
 </body>
