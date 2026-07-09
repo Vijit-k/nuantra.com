@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Nuantra · Where Spirit Transforms</title>
+<meta name="description" content="Nuantra is a guided journey into the philosophy, texts, and practices of the Hindu tradition — Vedanta, Bhakti, Tantra, and the living commentaries that have kept this knowledge alive for thousands of years."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cr:#EAE3D3;--cb:#6B1A1A;--cg:#C4922A;
+  --ct:#2A180E;--cm:#8B6F52;--ce:#CAB99D;--cl:#D8CCBA;--cs:#F2EBD9;
+}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+
+/* HERO */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 28px 40px;max-width:480px;margin:0 auto;text-align:center}
+.hero-logo{width:110px;height:110px;border-radius:50%;object-fit:cover;margin-bottom:36px;box-shadow:0 4px 24px rgba(107,26,26,.18)}
+.hero-question{font-family:"Noto Serif Devanagari",serif;font-size:clamp(19px,5.5vw,26px);font-weight:400;color:var(--cb);line-height:1.65;margin-bottom:20px;letter-spacing:.01em}
+.hero-translation{font-family:"Cormorant Garamond",serif;font-size:16px;color:var(--cm);font-style:italic;line-height:1.85;margin-bottom:8px}
+.hero-attr{font-size:11px;color:var(--cm);letter-spacing:.1em;margin-bottom:40px}
+.hero-divider{width:36px;height:1px;background:var(--cg);margin:0 auto 28px}
+.hero-desc{font-size:15px;line-height:1.85;color:var(--ct);max-width:320px}
+.hero-scroll{margin-top:40px;font-size:11px;color:var(--cm);letter-spacing:.15em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.hero-scroll::after{content:"";display:block;width:32px;height:1px;background:var(--cm)}
+
+/* DIVIDERS */
+.sec-div{border:none;border-top:1px solid var(--ce);margin:0}
+
+/* SECTIONS */
+.section{padding:48px 28px;max-width:480px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:.22em;color:var(--cg);font-weight:600;text-transform:uppercase;margin-bottom:18px}
+
+/* ABOUT */
+.about-p{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.75;color:var(--ct)}
+.about-p+.about-p{margin-top:14px}
+
+/* CARDS */
+.card{background:var(--cs);border:1px solid var(--ce);padding:26px 22px;margin-bottom:14px;border-radius:2px}
+.card-status{display:inline-block;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--cr);background:var(--cb);padding:3px 10px;border-radius:20px;margin-bottom:14px;font-weight:500}
+.card-status.soon{background:transparent;color:var(--cm);border:1px solid var(--ce)}
+.card-title{font-family:"Cormorant Garamond",serif;font-size:21px;color:var(--cb);font-weight:600;line-height:1.3;margin-bottom:6px}
+.card-sub{font-size:11px;color:var(--cg);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;font-weight:500}
+.card-desc{font-size:13px;line-height:1.8;color:var(--cm);margin-bottom:18px}
+.card-cta{display:inline-block;font-size:13px;font-weight:500;color:var(--cb);text-decoration:none;border-bottom:1px solid var(--cg);padding-bottom:2px}
+.card-cta:hover{color:var(--cg)}
+.card.soon-card{opacity:.65}
+
+/* NEWSLETTER */
+.nl-wrap{background:var(--cb);padding:40px 28px;max-width:480px;margin:0 auto}
+.nl-eyebrow{font-size:10px;letter-spacing:.22em;color:rgba(234,227,211,.55);font-weight:600;text-transform:uppercase;margin-bottom:14px}
+.nl-title{font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--cr);font-weight:600;line-height:1.3;margin-bottom:12px}
+.nl-desc{font-size:13px;color:rgba(234,227,211,.7);line-height:1.8;margin-bottom:24px}
+.nl-form{display:flex;flex-direction:column;gap:10px}
+.nl-input{width:100%;padding:14px 16px;background:rgba(234,227,211,.08);border:1px solid rgba(234,227,211,.18);color:var(--cr);font-size:14px;outline:none;font-family:"Inter",sans-serif;border-radius:2px}
+.nl-input::placeholder{color:rgba(234,227,211,.38)}
+.nl-input:focus{border-color:var(--cg)}
+.nl-btn{width:100%;padding:16px;background:var(--cg);color:var(--ct);border:none;font-size:14px;font-family:"Inter",sans-serif;cursor:pointer;letter-spacing:.05em;font-weight:500;border-radius:2px}
+.nl-note{font-size:11px;color:rgba(234,227,211,.35);margin-top:10px;line-height:1.6}
+.nl-success{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--cr);font-style:italic;line-height:1.7;display:none;padding:8px 0}
+.nl-success.on{display:block}
+.nl-form-inner.hid{display:none}
+
+/* QUOTE */
+.quote-section{padding:48px 28px;max-width:480px;margin:0 auto;text-align:center}
+.quote-deva{font-family:"Noto Serif Devanagari",serif;font-size:21px;color:var(--cb);line-height:1.7;margin-bottom:14px;font-weight:400}
+.quote-text{font-family:"Cormorant Garamond",serif;font-size:18px;color:var(--cm);font-style:italic;line-height:1.8;margin-bottom:10px}
+.quote-src{font-size:11px;color:var(--cm);letter-spacing:.12em;text-transform:uppercase}
+
+/* FOOTER */
+.footer{padding:32px 28px 44px;max-width:480px;margin:0 auto;border-top:1px solid var(--ce);display:flex;flex-direction:column;align-items:center;text-align:center}
+.footer-logo{width:64px;height:64px;border-radius:50%;object-fit:cover;margin-bottom:16px;opacity:.85}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--cm);font-style:italic;margin-bottom:18px}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:18px}
+.footer-links a{font-size:12px;color:var(--cm);text-decoration:none;letter-spacing:.04em}
+.footer-links a:hover{color:var(--cb)}
+.footer-copy{font-size:10px;color:var(--cl);letter-spacing:.06em}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="/Nuantra_logo.png" alt="Nuantra" class="hero-logo"/>
+  <div class="hero-question">
+    एकं सद्विप्रा<br/>बहुधा वदन्ति
+  </div>
+  <div class="hero-translation">
+    "Truth is one;<br/>the wise call it by many names."
+  </div>
+  <div class="hero-attr">Rig Veda · 1.164.46</div>
+  <div class="hero-divider"></div>
+  <div class="hero-desc">
+    A space to sit with the questions the tradition has always asked —
+    and to explore the answers it has spent thousands of years working out.
+  </div>
+  <div class="hero-scroll">Explore</div>
+</section>
+
+<hr class="sec-div"/>
+
+<!-- ABOUT -->
+<div class="section">
+  <div class="eyebrow">What Nuantra Is</div>
+  <p class="about-p">A guided journey into the philosophy, texts, and contemplative practices of the Hindu tradition — Vedanta, Bhakti, Tantra, and the great commentaries that have kept this knowledge alive.</p>
+  <p class="about-p" style="margin-top:14px;font-style:italic;color:var(--cm);font-size:17px">Not a course. Not a summary. A practice — one name, one text, one week at a time.</p>
+</div>
+
+<hr class="sec-div"/>
+
+<!-- JOURNEYS -->
+<div class="section">
+  <div class="eyebrow">Current Journey</div>
+  <div class="card">
+    <div class="card-status">Live · Day 1 onwards</div>
+    <div class="card-sub">1,000 Days · Daily Practice</div>
+    <div class="card-title">Vishnu Sahasranama</div>
+    <div class="card-desc">One name of Lord Vishnu each day — with meaning, Shankaracharya's commentary, and a 25-minute daily practice of reading and chanting. Across 1000 days, the complete Sahasranama. Source: Mahabharata, Anushasana Parva.</div>
+    <a class="card-cta" href="/vishnu-sahasranama.html">Begin the Journey →</a>
+  </div>
+
+  <div class="eyebrow" style="margin-top:32px;margin-bottom:14px">Coming</div>
+  <div class="card soon-card">
+    <div class="card-status soon">Upcoming</div>
+    <div class="card-sub">1,000 Days · Daily Practice</div>
+    <div class="card-title">Shiva Sahasranama</div>
+    <div class="card-desc">The Thousand Names of Shiva — from the Mahabharata and the Shiva Purana. The companion journey to the Vishnu Sahasranama.</div>
+  </div>
+  <div class="card soon-card">
+    <div class="card-status soon">Upcoming</div>
+    <div class="card-sub">112 Weeks · Weekly Practice</div>
+    <div class="card-title">Vigyan Bhairava Tantra</div>
+    <div class="card-desc">112 techniques of consciousness from the Shaiva Tantric tradition. One practice each week — the contemplative heart of Nuantra.</div>
+  </div>
+</div>
+
+<hr class="sec-div"/>
+
+<!-- QUOTE -->
+<div class="quote-section">
+  <div class="quote-deva">सर्वं खल्विदं ब्रह्म</div>
+  <div class="quote-text">"All this is indeed Brahman."</div>
+  <div class="quote-src">Chandogya Upanishad · 3.14.1</div>
+</div>
+
+<hr class="sec-div"/>
+
+<!-- NEWSLETTER -->
+<div class="nl-wrap">
+  <div class="nl-eyebrow">The Nuantra Letter</div>
+  <div class="nl-title">One practice.<br/>One text.<br/>Every week.</div>
+  <div class="nl-desc">Drawing from the Upanishads, the Bhakti poets, and the living commentarial tradition. Free. No ads. A personal offering.</div>
+  <div class="nl-success" id="nlSuccess">Welcome. Your first letter arrives next Thursday at 8 AM IST.</div>
+  <div class="nl-form-inner" id="nlFormInner">
+    <div class="nl-form">
+      <input class="nl-input" type="text" id="nlName" placeholder="Your name"/>
+      <input class="nl-input" type="email" id="nlEmail" placeholder="Your email"/>
+      <button class="nl-btn" onclick="joinNL()">Join free →</button>
+    </div>
+    <div class="nl-note">Thursdays · 8 AM IST · Unsubscribe anytime</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <img src="/Nuantra_logo.png" alt="Nuantra" class="footer-logo"/>
+  <div class="footer-tagline">Where Spirit Transforms</div>
+  <div class="footer-links">
+    <a href="/vishnu-sahasranama.html">Vishnu Sahasranama</a>
+    <a href="mailto:support@nuantra.com">Contact</a>
+    <a href="https://instagram.com/nuantra" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://youtube.com/@nuantra" target="_blank" rel="noopener">YouTube</a>
+  </div>
+  <div class="footer-copy">© 2026 Nuantra · A Vijit Labs offering</div>
+</div>
+
+<script>
+function joinNL(){
+  const name=document.getElementById("nlName").value.trim();
+  const email=document.getElementById("nlEmail").value.trim();
+  if(!email.includes("@")||!email.includes(".")){
+    document.getElementById("nlEmail").style.borderColor="rgba(196,146,42,.7)";
+    return;
+  }
+  const BEEHIIV="PASTE_BEEHIIV_SUBSCRIBE_URL_HERE";
+  if(BEEHIIV&&BEEHIIV!=="PASTE_BEEHIIV_SUBSCRIBE_URL_HERE")
+    window.open(BEEHIIV+"?email="+encodeURIComponent(email)+"&name="+encodeURIComponent(name),"_blank");
+  document.getElementById("nlFormInner").classList.add("hid");
+  document.getElementById("nlSuccess").classList.add("on");
+}
+</script>
+</body>
+</html>
