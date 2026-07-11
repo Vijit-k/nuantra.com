@@ -304,13 +304,7 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
   <div class="sub">
     <div class="stit">Join the 1,000-Day Journey</div>
     <div class="sdsc">Every week, seven names arrive in your inbox with Sanskrit, meaning, and Shankaracharya's commentary. Your journey starts the day you subscribe. Free. No ads. No monetization.</div>
-    <div class="ssc" id="ss"></div>
-    <div class="sfo" id="sf">
-      <input class="si" type="text" id="sn" placeholder="Your first name"/>
-      <input class="si" type="email" id="se2" placeholder="Your email"/>
-      <div class="ser" id="ser">Please enter a valid email address.</div>
-      <button class="sbtn" onclick="sub()">Begin the Journey →</button>
-    </div>
+    <a class="sbtn" href="https://e9cfbaff.sibforms.com/serve/MUIFAKElSZ-fyolfhy4x5wxtgCtfzA1W1TWNhUcuMOWoedyYW6IXB2mtqST5vFyUGldsQxose4rrT8Y3JzBl_6-rqv3S5Gt9-hNw6pYdHYk20oyGLTxVbXcqOeOCfK4vTxd71G59zQ52FjU26RPH0epIdiYXGCi_l0ymrkUaBVig1OAr1pgM-WQEooiRZhI4cXN7pJrY58BSLg1W6w==" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;text-decoration:none">Begin the Journey →</a>
   </div>
 
   <div class="ftr">
@@ -378,19 +372,37 @@ function rn(){
 }
 function nav(d){const ni=idx+d;if(ni<0||ni>=N.length)return;idx=ni;rn();window.scrollTo({top:0,behavior:"smooth"})}
 function tgc(){co=!co;document.getElementById("cbd").classList.toggle("on",co);document.getElementById("ci").textContent=co?"\u25BC":"\u25BA"}
-function sub(){
+async function sub(){
   const nm=document.getElementById("sn").value.trim();
   const em=document.getElementById("se2").value.trim();
   if(!nm){document.getElementById("sn").classList.add("err");return}
   if(!em.includes("@")||!em.includes(".")){document.getElementById("se2").classList.add("err");document.getElementById("ser").classList.add("on");return}
   document.getElementById("sn").classList.remove("err");
   document.getElementById("se2").classList.remove("err");document.getElementById("ser").classList.remove("on");
-  if(BF&&BF!=="PASTE_BREVO_FORM_URL_HERE")window.open(BF+"?EMAIL="+encodeURIComponent(em)+"&FIRSTNAME="+encodeURIComponent(nm),"_blank");
-  document.getElementById("sf").classList.add("hid");
-  const s=document.getElementById("ss");
-  s.textContent="Welcome, "+nm+". Complete your subscription in the tab that just opened. Your first email arrives in 7 days.";
-  s.classList.add("on");
-  if(!localStorage.getItem("vs_s"))localStorage.setItem("vs_s",ts());
+  // Show loading state
+  const btn=document.querySelector(".sbtn");
+  btn.textContent="Joining...";btn.disabled=true;
+  try{
+    const r=await fetch("https://nuantra-api.vercel.app/api/subscribe",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({name:nm,email:em})
+    });
+    const d=await r.json();
+    if(d.success){
+      document.getElementById("sf").classList.add("hid");
+      const s=document.getElementById("ss");
+      s.textContent="Welcome, "+nm+". Your journey starts today. Your first email arrives in 7 days.";
+      s.classList.add("on");
+      if(!localStorage.getItem("vs_s"))localStorage.setItem("vs_s",ts());
+    }else{
+      btn.textContent="Begin the Journey \u2192";btn.disabled=false;
+      alert("Something went wrong. Please try again.");
+    }
+  }catch(e){
+    btn.textContent="Begin the Journey \u2192";btn.disabled=false;
+    alert("Connection error. Please try again.");
+  }
 }
 (function(){
   const seenStory=localStorage.getItem("vs_story");
