@@ -78,8 +78,6 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
 .hdr-logo-img{width:28px;height:28px;border-radius:50%;object-fit:cover}
 .logo{font-family:"Cormorant Garamond",serif;font-size:12px;letter-spacing:.22em;color:var(--cb);font-weight:600;text-transform:uppercase;text-decoration:none}
 .hdr-r{display:flex;align-items:center;gap:8px}
-.sbadge{background:var(--cb);color:var(--cr);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:500;display:none}
-.sbadge.on{display:block}
 .info-btn{background:transparent;border:1px solid var(--ce);color:var(--cm);font-size:11px;cursor:pointer;padding:4px 10px;border-radius:12px;font-family:"Inter",sans-serif}
 .prg{padding:16px 24px 0}
 .prl{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
@@ -210,7 +208,7 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
     <div class="d0-step"><div class="d0-num">1</div><div class="d0-txt">Each day you receive one name of the Lord. 1000 names over 1000 days — the complete Sahasranama.</div></div>
     <div class="d0-step"><div class="d0-num">2</div><div class="d0-txt">Spend 25 minutes each morning. Read the name. Sit with the reflection. Chant along with M.S. Subbulakshmi.</div></div>
     <div class="d0-step"><div class="d0-num">3</div><div class="d0-txt">The names come from the Mahabharata, Anushasana Parva (SanskritDocuments.org, proofread 2024). Meanings from Adi Shankaracharya's Bhashya.</div></div>
-    <div class="d0-step"><div class="d0-num">4</div><div class="d0-txt">Your streak counts consecutive days. Your pilgrimage milestone marks your progress across India's sacred geography.</div></div>
+    <div class="d0-step"><div class="d0-num">4</div><div class="d0-txt">Your pilgrimage milestone marks your progress across India's sacred geography.</div></div>
   </div>
 
   <div class="d0-div"></div>
@@ -240,7 +238,7 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
     </div>
     <div class="hdr-r">
       <button class="info-btn" onclick="showStory()">The Story</button>
-      <div class="sbadge" id="sb"></div>
+      
     </div>
   </div>
 
@@ -336,7 +334,7 @@ function goDay0(){localStorage.setItem("vs_story","1");show("scr-day0")}
 function skipToNames(){localStorage.setItem("vs_story","1");if(!localStorage.getItem("vs_s")){localStorage.setItem("vs_s",ts());localStorage.setItem("vs_day0","1")}initNames();show("scr-name")}
 function startNames(){localStorage.setItem("vs_day0","1");if(!localStorage.getItem("vs_s"))localStorage.setItem("vs_s",ts());initNames();show("scr-name")}
 function showStory(){show("scr-story")}
-function initNames(){const s=localStorage.getItem("vs_s")||ts();const d=cd(s);idx=d-1;upd(d);streak();rn()}
+function initNames(){const s=localStorage.getItem("vs_s")||ts();const d=cd(s);idx=d-1;upd(d);rn()}
 function upd(d){
   const p=Math.min((d/1000)*100,100);
   document.getElementById("dl").textContent="YOUR DAY "+d+" OF 1,000";
@@ -347,12 +345,6 @@ function upd(d){
   document.getElementById("cm").textContent=cu.e+" "+cu.n;
   document.getElementById("nm").textContent=(nx.a-d)+" days to "+nx.e+" "+nx.n;
 }
-function streak(){
-  const t=new Date().toDateString();
-  const lv=localStorage.getItem("vs_lv");
-  const sv=parseInt(localStorage.getItem("vs_st")||"0");
-  let s;
-  if(lv===t){s=sv}else{const y=new Date();y.setDate(y.getDate()-1);s=lv===y.toDateString()?sv+1:1;localStorage.setItem("vs_st",String(s));localStorage.setItem("vs_lv",t)}
   if(s>0){const b=document.getElementById("sb");b.textContent="\uD83D\uDD25 "+s+" day"+(s!==1?"s":"");b.classList.add("on")}
 }
 function rn(){
