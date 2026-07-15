@@ -186,7 +186,7 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
     <div class="pb"><div class="pf" id="pf" style="width:.1%"></div></div>
   </div>
   <div class="pil-section">
-    <div class="pil-scroll">
+    <div class="pil-scroll" id="pilScroll">
       <svg id="pilSvg" viewBox="0 0 820 160" xmlns="http://www.w3.org/2000/svg" style="width:820px;display:block;min-width:820px"></svg>
     </div>
   </div>
@@ -296,6 +296,11 @@ function renderPil(d){
     }
   });
   document.getElementById("pilSvg").innerHTML=p.join("");
+  var sc=document.getElementById("pilScroll");
+  if(sc){
+    var target=Math.max(0,Math.min(px-sc.clientWidth/2,sc.scrollWidth-sc.clientWidth));
+    sc.scrollTo({left:target,behavior:"smooth"});
+  }
 }
 
 function upd(d){
