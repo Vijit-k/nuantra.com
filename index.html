@@ -50,21 +50,6 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
 .card-cta:hover{color:var(--cg)}
 .card.soon-card{opacity:.65}
 
-/* NEWSLETTER */
-.nl-wrap{background:var(--cb);padding:40px 28px;max-width:480px;margin:0 auto}
-.nl-eyebrow{font-size:10px;letter-spacing:.22em;color:rgba(234,227,211,.55);font-weight:600;text-transform:uppercase;margin-bottom:14px}
-.nl-title{font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--cr);font-weight:600;line-height:1.3;margin-bottom:12px}
-.nl-desc{font-size:13px;color:rgba(234,227,211,.7);line-height:1.8;margin-bottom:24px}
-.nl-form{display:flex;flex-direction:column;gap:10px}
-.nl-input{width:100%;padding:14px 16px;background:rgba(234,227,211,.08);border:1px solid rgba(234,227,211,.18);color:var(--cr);font-size:14px;outline:none;font-family:"Inter",sans-serif;border-radius:2px}
-.nl-input::placeholder{color:rgba(234,227,211,.38)}
-.nl-input:focus{border-color:var(--cg)}
-.nl-btn{width:100%;padding:16px;background:var(--cg);color:var(--ct);border:none;font-size:14px;font-family:"Inter",sans-serif;cursor:pointer;letter-spacing:.05em;font-weight:500;border-radius:2px}
-.nl-note{font-size:11px;color:rgba(234,227,211,.35);margin-top:10px;line-height:1.6}
-.nl-success{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--cr);font-style:italic;line-height:1.7;display:none;padding:8px 0}
-.nl-success.on{display:block}
-.nl-form-inner.hid{display:none}
-
 /* QUOTE */
 .quote-section{padding:48px 28px;max-width:480px;margin:0 auto;text-align:center}
 .quote-deva{font-family:"Noto Serif Devanagari",serif;font-size:21px;color:var(--cb);line-height:1.7;margin-bottom:14px;font-weight:400}
@@ -79,6 +64,25 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
 .footer-links a{font-size:12px;color:var(--cm);text-decoration:none;letter-spacing:.04em}
 .footer-links a:hover{color:var(--cb)}
 .footer-copy{font-size:10px;color:var(--cl);letter-spacing:.06em}
+
+/* ASK KRISHNA */
+.ak-intro{margin-bottom:24px}
+.ak-deva-trans{font-family:"Cormorant Garamond",serif;font-size:13px;font-style:italic;color:var(--cm);margin-bottom:16px;line-height:1.6}
+.ak-deva{font-family:"Noto Serif Devanagari",serif;font-size:17px;color:var(--cb);margin-bottom:12px;line-height:1.6}
+.ak-p{font-family:"Cormorant Garamond",serif;font-size:18px;line-height:1.7;color:var(--ct)}
+.ak-box{margin-bottom:8px}
+.ak-input{width:100%;padding:16px;background:var(--cs);border:1px solid var(--ce);color:var(--ct);font-size:14px;font-family:"Inter",sans-serif;outline:none;resize:vertical;border-radius:2px;line-height:1.6;margin-bottom:12px}
+.ak-input:focus{border-color:var(--cg)}
+.ak-input::placeholder{color:var(--cm)}
+.ak-btn{width:100%;padding:16px;background:var(--cb);color:var(--cr);border:none;font-size:14px;font-family:"Inter",sans-serif;cursor:pointer;letter-spacing:.05em;font-weight:500;border-radius:2px}
+.ak-btn:disabled{background:var(--cl);color:var(--cm);cursor:default}
+.ak-answer-wrap{display:none;margin-top:28px}
+.ak-answer-wrap.on{display:block}
+.ak-krishna-row{text-align:center;margin-bottom:20px}
+.ak-krishna-img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--cg);margin-bottom:10px;display:block;margin-left:auto;margin-right:auto}
+.ak-krishna-label{font-family:"Cormorant Garamond",serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--cg);font-weight:600}
+.ak-answer-box{background:var(--cs);border-left:3px solid var(--cg);padding:24px 22px;font-family:"Cormorant Garamond",serif;font-size:18px;line-height:1.75;color:var(--ct);font-style:italic;white-space:pre-wrap}
+.ak-note{font-size:11px;color:var(--cm);line-height:1.7;margin-top:20px;padding-top:16px;border-top:1px solid var(--ce)}
 </style>
 </head>
 <body>
@@ -109,6 +113,162 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
   <p class="about-p">A guided journey into the philosophy, texts, and contemplative practices of the Hindu tradition — Vedanta, Bhakti, Tantra, and the great commentaries that have kept this knowledge alive.</p>
   <p class="about-p" style="margin-top:14px;font-style:italic;color:var(--cm);font-size:17px">Not a course. Not a summary. A practice — one name, one text, one week at a time.</p>
 </div>
+
+<hr class="sec-div"/>
+
+<!-- ═══════════════════════════════════════════
+     ASK KRISHNA — insert this section into index.html
+     Place it after the "Journeys" section, before the closing quote
+═══════════════════════════════════════════ -->
+<hr class="sec-div"/>
+
+<div class="section" id="ask-krishna">
+  <div class="eyebrow">A Question, Answered</div>
+
+  <div class="ak-intro">
+    <div class="ak-deva">यदा यदा हि धर्मस्य ग्लानिर्भवति भारत ।<br/>अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम् ॥</div>
+    <div class="ak-deva-trans">"Whenever righteousness declines and unrighteousness rises, I manifest myself." — Bhagavad Gita 4.7</div>
+    <p class="ak-p">Whatever you carry — a decision, a fear, a knot in your chest — bring it here as Arjuna once did, at the edge of a battlefield, unsure of what came next.</p>
+  </div>
+
+  <div class="ak-box">
+    <textarea
+      class="ak-input"
+      id="akQuestion"
+      placeholder="What is weighing on you?"
+      maxlength="1500"
+      rows="4"
+    ></textarea>
+    <button class="ak-btn" id="akSubmit" onclick="askKrishna()">Ask →</button>
+  </div>
+
+  <div class="ak-answer-wrap" id="akAnswerWrap">
+    <div class="ak-krishna-row">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Krishna%20and%20Arjun%20on%20the%20chariot%2C%20Mahabharata%2C%2018th-19th%20century%2C%20India.jpg"
+           alt="Krishna and Arjuna" class="ak-krishna-img" onerror="this.style.display='none'"/>
+      <div class="ak-krishna-label">Krishna's Answer</div>
+    </div>
+    <div class="ak-answer-box" id="akAnswer"></div>
+  </div>
+
+  <div class="ak-note">This is a space for reflection, not a substitute for medical, psychiatric, or professional care. If you are in crisis, please reach out to a real person — a professional or someone you trust — right away.</div>
+</div>
+
+<style>
+/* ── ASK KRISHNA ────────────────────────── */
+.ak-intro{margin-bottom:24px}
+.ak-deva-trans{font-family:"Cormorant Garamond",serif;font-size:13px;font-style:italic;color:var(--cm);margin-bottom:16px;line-height:1.6}
+.ak-deva{font-family:'Noto Serif Devanagari',serif;font-size:17px;color:var(--cb);margin-bottom:12px;line-height:1.6}
+.ak-p{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.7;color:var(--ct)}
+.ak-box{margin-bottom:8px}
+.ak-input{
+  width:100%;
+  padding:16px;
+  background:var(--cs);
+  border:1px solid var(--ce);
+  color:var(--ct);
+  font-size:14px;
+  font-family:'Inter',sans-serif;
+  outline:none;
+  resize:vertical;
+  border-radius:2px;
+  line-height:1.6;
+  margin-bottom:12px;
+}
+.ak-input:focus{border-color:var(--cg)}
+.ak-input::placeholder{color:var(--cm)}
+.ak-btn{
+  width:100%;
+  padding:16px;
+  background:var(--cb);
+  color:var(--cr);
+  border:none;
+  font-size:14px;
+  font-family:'Inter',sans-serif;
+  cursor:pointer;
+  letter-spacing:.05em;
+  font-weight:500;
+  border-radius:2px;
+}
+.ak-btn:disabled{background:var(--cl);color:var(--cm);cursor:default}
+.ak-answer-wrap{display:none;margin-top:28px}
+.ak-answer-wrap.on{display:block}
+.ak-krishna-row{text-align:center;margin-bottom:20px}
+.ak-krishna-img{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--cg);
+  margin-bottom:10px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.ak-krishna-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--cg);
+  font-weight:600;
+}
+.ak-answer-box{
+  background:var(--cs);
+  border-left:3px solid var(--cg);
+  padding:24px 22px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  line-height:1.75;
+  color:var(--ct);
+  font-style:italic;
+  white-space:pre-wrap;
+}
+.ak-note{
+  font-size:11px;
+  color:var(--cm);
+  line-height:1.7;
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid var(--ce);
+}
+</style>
+
+<script>
+async function askKrishna(){
+  const q = document.getElementById('akQuestion').value.trim();
+  const btn = document.getElementById('akSubmit');
+  const answerWrap = document.getElementById('akAnswerWrap');
+  const answerBox = document.getElementById('akAnswer');
+
+  if(!q){
+    document.getElementById('akQuestion').focus();
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Listening...';
+  answerWrap.classList.add('on');
+  answerBox.textContent = '...';
+
+  try{
+    const r = await fetch('https://nuantra-api.vercel.app/api/ask-krishna', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({question: q})
+    });
+    const data = await r.json();
+    answerBox.textContent = data.answer || 'I could not form a response just now. Please try again.';
+  }catch(e){
+    answerBox.textContent = 'Something went wrong reaching Krishna just now. Please try again in a moment.';
+  }finally{
+    btn.disabled = false;
+    btn.textContent = 'Ask →';
+    answerWrap.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+</script>
+
 
 <hr class="sec-div"/>
 
@@ -149,22 +309,6 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
 
 <hr class="sec-div"/>
 
-<!-- NEWSLETTER -->
-<div class="nl-wrap">
-  <div class="nl-eyebrow">The Nuantra Letter</div>
-  <div class="nl-title">One practice.<br/>One text.<br/>Every week.</div>
-  <div class="nl-desc">Drawing from the Upanishads, the Bhakti poets, and the living commentarial tradition. Free. No ads. A personal offering.</div>
-  <div class="nl-success" id="nlSuccess">Welcome. Your first letter arrives next Thursday at 8 AM IST.</div>
-  <div class="nl-form-inner" id="nlFormInner">
-    <div class="nl-form">
-      <input class="nl-input" type="text" id="nlName" placeholder="Your name"/>
-      <input class="nl-input" type="email" id="nlEmail" placeholder="Your email"/>
-      <button class="nl-btn" onclick="joinNL()">Join free →</button>
-    </div>
-    <div class="nl-note">Thursdays · 8 AM IST · Unsubscribe anytime</div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <div class="footer">
   <img src="/Nuantra_logo.png" alt="Nuantra" class="footer-logo"/>
@@ -178,20 +322,5 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
   <div class="footer-copy">© 2026 Nuantra · A Vijit Labs offering</div>
 </div>
 
-<script>
-function joinNL(){
-  const name=document.getElementById("nlName").value.trim();
-  const email=document.getElementById("nlEmail").value.trim();
-  if(!email.includes("@")||!email.includes(".")){
-    document.getElementById("nlEmail").style.borderColor="rgba(196,146,42,.7)";
-    return;
-  }
-  const BEEHIIV="PASTE_BEEHIIV_SUBSCRIBE_URL_HERE";
-  if(BEEHIIV&&BEEHIIV!=="PASTE_BEEHIIV_SUBSCRIBE_URL_HERE")
-    window.open(BEEHIIV+"?email="+encodeURIComponent(email)+"&name="+encodeURIComponent(name),"_blank");
-  document.getElementById("nlFormInner").classList.add("hid");
-  document.getElementById("nlSuccess").classList.add("on");
-}
-</script>
 </body>
 </html>
