@@ -122,6 +122,11 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
 ═══════════════════════════════════════════ -->
 <hr class="sec-div"/>
 
+<!-- ═══════════════════════════════════════════
+     ASK KRISHNA — with pre-question consent modal
+     Replaces the previous ask-krishna-block.html section
+═══════════════════════════════════════════ -->
+
 <div class="section" id="ask-krishna">
   <div class="eyebrow">A Question, Answered</div>
 
@@ -139,7 +144,7 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
       maxlength="1500"
       rows="4"
     ></textarea>
-    <button class="ak-btn" id="akSubmit" onclick="askKrishna()">Ask →</button>
+    <button class="ak-btn" id="akSubmit" onclick="handleAskClick()">Ask →</button>
   </div>
 
   <div class="ak-answer-wrap" id="akAnswerWrap">
@@ -154,11 +159,37 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
   <div class="ak-note">This is a space for reflection, not a substitute for medical, psychiatric, or professional care. If you are in crisis, please reach out to a real person — a professional or someone you trust — right away.</div>
 </div>
 
+<!-- CONSENT MODAL — shown once before the first question -->
+<div class="ak-modal-overlay" id="akModalOverlay">
+  <div class="ak-modal">
+    <div class="ak-modal-icon">🙏</div>
+    <div class="ak-modal-title">Before You Ask</div>
+    <p class="ak-modal-p">
+      This space offers reflection drawn from the Bhagavad Gita — it is not a substitute for
+      professional medical, psychiatric, or emergency care.
+    </p>
+    <p class="ak-modal-p">
+      <strong>By continuing, you agree not to submit questions describing or seeking
+      guidance on self-harm, suicide, or violence toward yourself or anyone else.</strong>
+      Such questions will not receive a generated response.
+    </p>
+    <div class="ak-modal-helplines">
+      <div class="ak-modal-help-label">If you are struggling right now</div>
+      <div class="ak-modal-help-row"><span>iCall (India)</span><span>9152987821</span></div>
+      <div class="ak-modal-help-row"><span>AASRA (India)</span><span>9820466726</span></div>
+      <div class="ak-modal-help-row"><span>Kiran (Govt. of India)</span><span>1800-599-0019</span></div>
+      <div class="ak-modal-help-note">Outside India, please contact your local emergency number or crisis helpline.</div>
+    </div>
+    <button class="ak-modal-btn" onclick="acceptAkConsent()">I Understand — Continue</button>
+    <button class="ak-modal-cancel" onclick="closeAkModal()">Not Now</button>
+  </div>
+</div>
+
 <style>
 /* ── ASK KRISHNA ────────────────────────── */
 .ak-intro{margin-bottom:24px}
-.ak-deva-trans{font-family:"Cormorant Garamond",serif;font-size:13px;font-style:italic;color:var(--cm);margin-bottom:16px;line-height:1.6}
 .ak-deva{font-family:'Noto Serif Devanagari',serif;font-size:17px;color:var(--cb);margin-bottom:12px;line-height:1.6}
+.ak-deva-trans{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:var(--cm);margin-bottom:16px;line-height:1.6}
 .ak-p{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.7;color:var(--ct)}
 .ak-box{margin-bottom:8px}
 .ak-input{
@@ -232,9 +263,128 @@ body{background:var(--cr);color:var(--ct);font-family:"Inter",-apple-system,sans
   padding-top:16px;
   border-top:1px solid var(--ce);
 }
+
+/* ── CONSENT MODAL ──────────────────────── */
+.ak-modal-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(42,24,14,.55);
+  z-index:200;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.ak-modal-overlay.on{display:flex}
+.ak-modal{
+  background:var(--cr);
+  max-width:380px;
+  width:100%;
+  padding:32px 26px;
+  border-radius:4px;
+  max-height:90vh;
+  overflow-y:auto;
+  box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+.ak-modal-icon{font-size:28px;text-align:center;margin-bottom:12px}
+.ak-modal-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:21px;
+  font-weight:600;
+  color:var(--cb);
+  text-align:center;
+  margin-bottom:18px;
+}
+.ak-modal-p{
+  font-size:13px;
+  line-height:1.75;
+  color:var(--ct);
+  margin-bottom:14px;
+}
+.ak-modal-p strong{color:var(--cb)}
+.ak-modal-helplines{
+  background:var(--cs);
+  border-left:3px solid var(--cg);
+  padding:16px 18px;
+  margin:18px 0;
+  border-radius:2px;
+}
+.ak-modal-help-label{
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--cg);
+  font-weight:600;
+  margin-bottom:10px;
+}
+.ak-modal-help-row{
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  color:var(--ct);
+  margin-bottom:6px;
+  font-family:'Inter',sans-serif;
+}
+.ak-modal-help-row span:last-child{font-weight:500;color:var(--cb)}
+.ak-modal-help-note{
+  font-size:11px;
+  color:var(--cm);
+  margin-top:8px;
+  line-height:1.6;
+}
+.ak-modal-btn{
+  width:100%;
+  padding:15px;
+  background:var(--cb);
+  color:var(--cr);
+  border:none;
+  font-size:14px;
+  font-family:'Inter',sans-serif;
+  cursor:pointer;
+  letter-spacing:.04em;
+  font-weight:500;
+  border-radius:2px;
+  margin-bottom:10px;
+}
+.ak-modal-cancel{
+  width:100%;
+  padding:12px;
+  background:transparent;
+  border:1px solid var(--ce);
+  color:var(--cm);
+  font-size:13px;
+  font-family:'Inter',sans-serif;
+  cursor:pointer;
+  border-radius:2px;
+}
 </style>
 
 <script>
+const AK_CONSENT_KEY = 'ak_consent_given';
+
+function handleAskClick(){
+  const q = document.getElementById('akQuestion').value.trim();
+  if(!q){
+    document.getElementById('akQuestion').focus();
+    return;
+  }
+  if(localStorage.getItem(AK_CONSENT_KEY) === '1'){
+    askKrishna();
+  } else {
+    document.getElementById('akModalOverlay').classList.add('on');
+  }
+}
+
+function acceptAkConsent(){
+  localStorage.setItem(AK_CONSENT_KEY, '1');
+  document.getElementById('akModalOverlay').classList.remove('on');
+  askKrishna();
+}
+
+function closeAkModal(){
+  document.getElementById('akModalOverlay').classList.remove('on');
+}
+
 async function askKrishna(){
   const q = document.getElementById('akQuestion').value.trim();
   const btn = document.getElementById('akSubmit');
